@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import Content from '../../content/publications.md'; import Card from '../components/Card.astro'; import pubs from '../../data/selected-publications.yml'; import links from '../../data/links.yml'; const cited=links.find(x=>x.id==='scholar-cited'), recent=links.find(x=>x.id==='scholar-recent');
+---
+<BaseLayout title="Publications — Samuel Somot"><div class="page-stack"><article class="prose intro-only"><Content/><div class="actions"><a class="button" href={cited.url}>Most cited on Google Scholar</a><a class="button secondary" href={recent.url}>Most recent</a></div></article><section><h2>Selected publications</h2><div class="grid two">{pubs.map(x=><Card title={x.citation} eyebrow={x.details}><h4>Why I selected this paper</h4><p>{x.why}</p></Card>)}</div></section></div></BaseLayout>

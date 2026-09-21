@@ -1,0 +1,7 @@
+---
+const { eyebrow } = Astro.props;
+---
+<header class="page-intro">
+  {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+  <slot />
+</header>

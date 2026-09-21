@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import Content from '../../content/news.md'; import Card from '../components/Card.astro'; import news from '../../data/news.yml'; const items=news.filter(x=>x.published).sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,4);
+---
+<BaseLayout title="News — Samuel Somot"><div class="page-stack"><article class="prose intro-only"><Content/></article><section>{items.length?<div class="grid two">{items.map(x=><Card title={x.title} eyebrow={x.date} href={x.source_url}><p>{x.summary}</p></Card>)}</div>:<div class="empty-state"><h2>Archive ready</h2><p>No entries are published yet. Verified news can be added to <code>data/news.yml</code>.</p></div>}<p class="linkedin-cta"><a class="button" href="https://www.linkedin.com/in/sam-somot/">Follow me on LinkedIn ↗</a></p></section></div></BaseLayout>

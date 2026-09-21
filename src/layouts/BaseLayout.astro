@@ -1,0 +1,7 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const { title = 'Samuel Somot — Climate scientist', description = 'Regional climate and Earth system modelling, from Europe to the Mediterranean Sea.' } = Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><meta name="theme-color" content="#073b66"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><title>{title}</title></head><body><a class="skip-link" href="#main">Skip to content</a><div class="shell"><Header/><main id="main"><slot /></main><Footer/></div></body></html>

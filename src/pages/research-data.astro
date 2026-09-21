@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import Content from '../../content/research-data.md'; import Card from '../components/Card.astro'; import datasets from '../../data/research-data.yml';
+---
+<BaseLayout title="Research Data — Samuel Somot"><div class="page-stack"><article class="prose intro-only"><Content/></article><section><div class="grid">{datasets.map(x=><Card title={x.title} eyebrow={`${x.repository} · ${x.status}`} href={x.url} featured={x.featured}><p>{x.description}</p><div class="tags">{x.keywords.map(k=><span>{k}</span>)}</div></Card>)}</div></section></div></BaseLayout>

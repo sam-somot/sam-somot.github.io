@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import ProfileLinks from '../components/ProfileLinks.astro';
+import projects from '../../data/projects.yml';
+import communities from '../../data/communities.yml';
+import news from '../../data/news.yml';
+const activities = [communities.find(x=>x.name==='Med-CORDEX'), ...projects.filter(x=>['RIVIERADE','FUTURA','MEDIATION'].includes(x.name))].filter(Boolean);
+const latest = news.filter(x=>x.published).sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,3);
+---
+<BaseLayout>
+  <section class="hero">
+    <div class="hero-copy"><p class="eyebrow">CNRM · Météo-France / CNRS · Toulouse, France</p><h1>Samuel Somot</h1><p class="hero-role">Climate scientist — Regional climate & Earth system modelling</p><p class="hero-line">Understanding climate change at regional scales, from Europe to the Mediterranean Sea.</p><div class="actions"><a class="button" href="/research">Research</a><a class="button secondary" href="/publications">Publications</a></div></div>
+    <div class="hero-visual" aria-label="Reserved spaces for portrait and scientific climate figure"><div class="climate-map"><span>Scientific figure<br/><small>Europe–Mediterranean climate map</small></span></div><div class="portrait"><span>Portrait<br/><small>to be provided</small></span></div></div>
+  </section>
+  <section><div class="section-heading"><p class="eyebrow">Research at a glance</p><h2>Connecting processes, models and regional information</h2></div><div class="grid four">
+    <Card title="Regional climate modelling" href="/research#1-regional-climate-modelling"><p>Regional climate and Earth system modelling.</p></Card>
+    <Card title="Euro-Mediterranean climate and sea" href="/research#2-euro-mediterranean-climate-and-sea"><p>Atmosphere, ocean and regional forcings.</p></Card>
+    <Card title="Regional climate phenomena and extremes" href="/research#3-regional-climate-phenomena-and-extremes"><p>Processes shaping extremes and circulation.</p></Card>
+    <Card title="Regional climate information" href="/research#4-regional-climate-information"><p>Climate projections, services and adaptation.</p></Card>
+  </div></section>
+  <section class="tinted"><div class="section-heading"><p class="eyebrow">Current activities</p><h2>Projects and scientific communities</h2></div><div class="grid four">{activities.map(item=><Card title={item.name} eyebrow={item.role || 'Scientific community'} href="/projects-communities" featured={item.featured}/>)}</div></section>
+  <section><div class="section-heading split"><div><p class="eyebrow">Latest news</p><h2>From research and the community</h2></div><a href="https://www.linkedin.com/in/sam-somot/" target="_blank" rel="noreferrer">Follow me on LinkedIn ↗</a></div>{latest.length ? <div class="grid three">{latest.map(item=><Card title={item.title} eyebrow={item.date} href="/news"><p>{item.summary}</p></Card>)}</div> : <div class="empty-state"><p>No news entries are published yet.</p><a href="/news">View the news archive structure →</a></div>}</section>
+  <section><div class="section-heading"><p class="eyebrow">Research outputs</p><h2>Explore the work</h2></div><div class="grid three"><Card title="Selected publications" href="/publications"/><Card title="Research data" href="/research-data"/><Card title="Scientific expertise" href="/scientific-expertise"/></div></section>
+  <section class="profiles"><div><p class="eyebrow">Profiles</p><h2>Find my scientific work online</h2></div><ProfileLinks/></section>
+</BaseLayout>

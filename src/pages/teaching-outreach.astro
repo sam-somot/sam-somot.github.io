@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import Content from '../../content/teaching-outreach.md'; import Card from '../components/Card.astro'; import teaching from '../../data/teaching.yml'; import outreach from '../../data/outreach.yml';
+---
+<BaseLayout title="Enseignement & Communication scientifique — Samuel Somot"><div class="page-stack"><article class="prose"><Content/></article><section><h2>Ressources d’enseignement</h2><div class="grid two">{teaching.map(x=><Card title={x.title} eyebrow={`${x.language} · ${x.metadata_status}`} href={x.url}/>)}</div></section><section><h2>Ressources de communication scientifique</h2>{outreach.length ? <div class="grid three">{outreach.map(x=><Card title={x.title} href={x.url}/>)}</div> : <div class="empty-state"><p>Les futures ressources seront ajoutées ici après vérification de leurs métadonnées.</p></div>}</section></div></BaseLayout>

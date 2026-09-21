@@ -1,0 +1,17 @@
+- id: cnrm-cordex-cmip6
+  title: CNRM CORDEX-CMIP6 regional climate simulations
+  featured: true
+  status: available
+  description: "New generation of high-resolution regional climate simulations produced at CNRM within the WCRP CORDEX-CMIP6 framework. The simulations were performed with different versions of the CNRM-ALADIN regional climate model and cover several CORDEX domains, including Europe (EUR), the Mediterranean (MED), Central America (CAM), and Australasia (AUS)."
+  keywords:
+    - CORDEX-CMIP6
+    - EURO-CORDEX
+    - Med-CORDEX
+    - regional climate modelling
+    - climate projections
+    - high resolution
+    - CNRM-ALADIN
+    - Europe
+    - Mediterranean
+  repository: ESGF
+  url: https://metagrid-ceda.east.esgf.io/search

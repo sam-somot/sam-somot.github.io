@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import Content from '../../content/scientific-expertise.md'; import Card from '../components/Card.astro'; import expertise from '../../data/scientific-expertise.yml';
+---
+<BaseLayout title="Scientific Expertise — Samuel Somot"><div class="page-stack"><article class="prose intro-only"><Content/></article><section><div class="grid two">{expertise.map(x=><Card title={x.title} eyebrow={`${x.organization} · ${x.year||`since ${x.since}`} · ${x.role}`} href={x.url} featured={x.featured}>{x.description&&<p>{x.description}</p>}{x.reference&&<p class="reference">{x.reference}</p>}</Card>)}</div></section></div></BaseLayout>
