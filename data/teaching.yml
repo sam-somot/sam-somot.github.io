@@ -1,5 +1,15 @@
 - id: regional-climate-modelling-course
-  title: Modélisation régionale du climat - Scénarios climatiques à l'échelle de l'Europe et de la France
+  title: Modélisation régionale du climat - Scénarios climatiques à l'échelle de l'Europe et de la France (2025)
   language: French
   url: https://zenodo.org/records/17287121
   metadata_status: last version
+
+- id: regional-climate-modelling-course-video-2024
+  title: Modélisation régionale du climat - cours filmé (2024)
+  language: French
+  url: https://www.youtube.com/watch?v=iUrLz5oe_GU
+
+- id: cnrm-aladin-course
+  title: Le modèle régional de climat CNRM-ALADIN (2021)
+  language: French
+  url: https://nextcloud.meteo.fr/s/TtHj73DHHZeZNJW
