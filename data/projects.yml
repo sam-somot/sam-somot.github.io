@@ -1,31 +1,36 @@
 - name: RIVIERADE
+  programme: HEU
   status: current
   start: 2026-01
   role: CNRM Principal Investigator and WP4 leader
   featured: true
 - name: TRACCS-LOCALISING
+  programme: PEPR
   status: current
   start: 2024-01
   role: Project Principal Investigator
-  featured: false
+  featured: true
 - name: IMPETUS4CHANGE
+  programme: HEU
   status: current
-  role: WP3 co-leader
-  featured: false
+  role: CNRM Principal Investigator and WP3 co-leader
+  featured: true
 - name: Socle Métropole
-  type: internal Météo-France project
+  programme: Météo-France project
   status: current
   role: Project co-leader
-  featured: false
+  featured: true
 - name: FUTURA
+  programme: HEU
   start: 2026-06
   status: current
+  role: participation
   featured: true
 - name: MEDIATION
-  type: national project
+  programme: PPR Ocean & Climat
+  status: current  
   role: CNRM Principal Investigator
-  status: current
-  featured: true
+  featured: false
 - name: EUCP
   programme: H2020
   role: CNRM Principal Investigator
