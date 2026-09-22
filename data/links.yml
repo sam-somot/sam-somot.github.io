@@ -3,11 +3,11 @@
   url: https://www.linkedin.com/in/sam-somot/
   active: true
 - id: scholar-cited
-  label: Google Scholar — most cited
+  label: Google Scholar — most cited first
   url: https://scholar.google.com/citations?user=wG2YZ9EAAAAJ&hl=en
   active: true
 - id: scholar-recent
-  label: Google Scholar — recent
+  label: Google Scholar — most recent first
   url: https://scholar.google.fr/citations?hl=fr&user=wG2YZ9EAAAAJ&view_op=list_works&sortby=pubdate
   active: true
 - id: github
@@ -16,17 +16,17 @@
   active: true
 - id: orcid
   label: ORCID
-  url: ""
-  active: false
+  url: http://orcid.org/0000-0002-5066-2921
+  active: true
 - id: web-of-science
   label: Web of Science
   url: ""
   active: false
 - id: scopus
   label: Scopus
-  url: ""
+  url: https://www.scopus.com/authid/detail.uri?authorId=23478660100
   active: false
 - id: researchgate
   label: ResearchGate
-  url: ""
+  url: https://www.researchgate.net/profile/Samuel_Somot
   active: false
