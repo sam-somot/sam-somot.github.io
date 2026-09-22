@@ -10,6 +10,18 @@
   type: video-series
   url: https://www.youtube.com/playlist?list=PLYMlM3ymkDJGm948FH6Z8GreZrPUQndbb
 
+- id: eucp-incertitudes
+  title: Expliquer les incertitudes dans les projections climatiques (2025)
+  language: French, English
+  type: video
+  url: https://vimeo.com/85531294
+
+- id: rts-pluie-2021
+  title: Interview pour la radio suisse RTS dans l’émission Prise de Terre sur les épisodes méditerranéens de pluie intense (2021)
+  language: French
+  type: interview radio
+  url: https://www.rts.ch/audio-podcast/2021/audio/meteo-quand-le-ciel-nous-tombe-sur-la-tete-25183964.html
+
 - id: blob-mediterranean-climate-change
   title: 3 questions sur le changement climatique du bassin méditerranéen (2020)
   language: French
