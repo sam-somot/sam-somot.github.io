@@ -1,1 +1,53 @@
-[]
+- id: climate-europe-2050
+  title: Quel climat en Europe pour 2050 ? (2021)
+  language: Français, Anglais, Allemand, Espagnol, Italien, Suédois et Croate
+  type: video
+  url: https://www.youtube.com/watch?v=64xNugjI6jc
+
+- id: mediation-ocean-models
+  title: Comprendre les modèles numériques d'océan - projet MEDIATION (2025)
+  language: French
+  type: video-series
+  url: https://www.youtube.com/playlist?list=PLYMlM3ymkDJGm948FH6Z8GreZrPUQndbb
+
+- id: blob-mediterranean-climate-change
+  title: 3 questions sur le changement climatique du bassin méditerranéen (2020)
+  language: French
+  type: video
+  url: https://leblob.fr/videos/3-questions-sur-le-changement-climatique-du-bassin-mediterraneen
+
+- id: mediterranean-marine-heatwaves
+  title: Évolution climatique des canicules océaniques en Méditerranée (2020)
+  language: French
+  type: article
+  url: https://www.insu.cnrs.fr/fr/cnrsinfo/evolution-climatique-des-canicules-oceaniques-en-mediterranee
+
+- id: mediterranean-extreme-rainfall
+  title: Pluies extrêmes et crues en Méditerranée (2020)
+  language: French
+  type: article
+  url: https://www.insu.cnrs.fr/fr/cnrsinfo/pluies-extremes-et-crues-en-mediterranee
+
+- id: regional-climate-modelling-explained
+  title: Qu’est-ce que la modélisation régionale climatique ?
+  language: French
+  type: article
+  url: http://www.climat-en-questions.fr/reponse/evolution-future/regionalisation-par-samuel-somot-robert-vautard
+
+- id: researcher-interview-ens
+  title: Interview sur mon métier de chercheur (2019)
+  language: French
+  type: interview
+  url: https://alumni.ens-lyon.fr/article/interview-de-samuel-somot-physique-1997-sur-son-metier-de-chercheur-a-meteo-france-et-au-cnrm/05/02/2019/30
+
+- id: climatologist-interview-futura
+  title: Qu’est-ce qu’un climatologue ? (2025)
+  language: French
+  type: interview
+  url: https://www.futura-sciences.com/planete/actualites/rechauffement-climatique-servent-vraiment-climatologues-dessous-metier-incompris-attaque-125561/
+
+- id: clim-run-interview
+  title: Interview on Mediterranean climate and climate services - CLIM-RUN project (2014)
+  language: English
+  type: interview
+  url: https://www.youtube.com/watch?v=s52cMvCUSlI
