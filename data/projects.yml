@@ -1,17 +1,21 @@
 - name: RIVIERADE
   status: current
   start: 2026-01
-  role: WP4 leader
+  role: CNRM Principal Investigator and WP4 leader
   featured: true
 - name: TRACCS-LOCALISING
   status: current
+  start: 2024-01
+  role: Project Principal Investigator
   featured: false
 - name: IMPETUS4CHANGE
   status: current
+  role: WP2 co-leader
   featured: false
 - name: Socle Métropole
   type: internal Météo-France project
   status: current
+  role: Project co-leader
   featured: false
 - name: FUTURA
   start: 2026-06
@@ -19,20 +23,20 @@
   featured: true
 - name: MEDIATION
   type: national project
-  role: CNRM Principal Investigator (PI)
+  role: CNRM Principal Investigator
   status: current
   featured: true
 - name: EUCP
   programme: H2020
-  role: CNRM PI
+  role: CNRM Principal Investigator
   status: past
 - name: PopN'Co
   programme: ANR
-  role: CNRM PI
+  role: CNRM Principal Investigator
   status: past
 - name: REMEMBER
   programme: ANR
-  role: CNRM PI + WP5 co-leader
+  role: CNRM Principal Investigator and WP5 co-leader
   status: past
 - name: CLIM-RUN
   programme: FP7
@@ -40,7 +44,7 @@
   status: past
 - name: C3S PRINCIPLES
   programme: Copernicus C3S
-  role: CNRM PI
+  role: CNRM Principal Investigator
   status: past
 - name: ENSEMBLES
   programme: FP6
