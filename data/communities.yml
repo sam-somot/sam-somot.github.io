@@ -1,23 +1,30 @@
 - name: Med-CORDEX
   status: active
+  role: Leader
   featured: true
 - name: EURO-CORDEX
   status: active
-  featured: false
+  role: CNRM Principal Investigator
+  featured: true
 - name: CORDEX
   status: active
-  featured: false
+  role: CNRM Principal Investigator
+  featured: true
 - name: CLIMERI-France
   status: active
+  role: Member of the Scientific Committee and Regional Climate Modelling representative
   featured: false
 - name: SiMed
   status: active
+  role: Participation
   featured: false
 - name: MISTRALS
   status: historical
+  role: Leader of the regiional climate modelling activities, Med-CORDEX
   completed: 2020
   featured: false
 - name: HyMeX
   status: historical
+  role: Leader of the regiional climate modelling activities, TTM3
   completed: 2020
   featured: false
