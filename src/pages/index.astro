@@ -9,10 +9,10 @@ const activities = [communities.find((item) => item.name === 'Med-CORDEX'), ...p
 const latest = news.filter((item) => item.published).sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 3);
 
 const researchAxes = [
-  { number: '01', title: 'Regional climate modelling', text: 'Regional climate and Earth system modelling.', href: '/research#1-regional-climate-modelling', image: '/images/v2/web/cnrm-rcsm-coupled-system-diagram.webp', alt: 'CNRM-RCSM diagram showing coupled components of a regional climate system model', className: 'research-axis--model' },
-  { number: '02', title: 'Euro-Mediterranean climate and sea', text: 'Atmosphere, ocean and regional forcings.', href: '/research#2-euro-mediterranean-climate-and-sea', image: '/images/v2/web/regional-climate-global-to-euromed-zoom.webp', alt: 'Scientific figure linking the global scale to the Euro-Mediterranean modelling region', className: 'research-axis--mediterranean' },
-  { number: '03', title: 'Regional climate phenomena and extremes', text: 'Processes shaping extremes and circulation.', href: '/research#3-regional-climate-phenomena-and-extremes', image: '/images/v2/web/mediterranean-marine-heatwaves-darmaraki.webp', alt: 'Scientific figure on projected Mediterranean marine heatwave intensity, duration and extent', className: 'research-axis--extremes' },
-  { number: '04', title: 'Regional climate information', text: 'Climate projections, services and adaptation.', href: '/research#4-regional-climate-information', image: '/images/v2/web/drias-tracc-tropical-nights-france-plus4c.webp', alt: 'DRIAS and TRACC map of tropical nights in metropolitan France at four degrees of global warming', className: 'research-axis--information' },
+  { number: '01', title: 'Regional climate modelling', text: 'Regional climate and Earth system modelling.', href: '/research#1-regional-climate-modelling', image: '/images/v2.2/01_regional_climate_modelling.png', alt: 'Editorial illustration of regional climate modelling', className: 'research-axis--model' },
+  { number: '02', title: 'Euro-Mediterranean climate and sea', text: 'Atmosphere, ocean and regional forcings.', href: '/research#2-euro-mediterranean-climate-and-sea', image: '/images/v2.2/02_euro_mediterranean_climate.png', alt: 'Editorial illustration of Europe and the Mediterranean Sea', className: 'research-axis--mediterranean' },
+  { number: '03', title: 'Regional climate phenomena and extremes', text: 'Processes shaping extremes and circulation.', href: '/research#3-regional-climate-phenomena-and-extremes', image: '/images/v2.2/03_climate_phenomena_extremes.png', alt: 'Editorial illustration of climate phenomena and extremes', className: 'research-axis--extremes' },
+  { number: '04', title: 'Regional climate information', text: 'Climate projections, services and adaptation.', href: '/research#4-regional-climate-information', image: '/images/v2.2/04_regional_climate_information.png', alt: 'Editorial illustration of regional climate information', className: 'research-axis--information' },
 ];
 
 const activityAssets = {
@@ -40,12 +40,12 @@ const activityAssets = {
     </div>
   </section>
 
-  <section class="research-overview">
+  <section class="research-overview research-overview--v22">
     <div class="section-heading section-heading--compact"><p class="eyebrow">Research at a glance</p><h2>Connecting processes, models and regional information</h2></div>
     <div class="research-axis-grid">
       {researchAxes.map((axis) => (
         <a class:list={['research-axis', axis.className]} href={axis.href}>
-          <div class="research-axis-visual"><img src={axis.image} alt={axis.alt} loading="lazy" /></div>
+          <div class="research-axis-visual"><img src={axis.image} alt={axis.alt} width="900" height="900" loading="lazy" decoding="async" /></div>
           <div class="research-axis-copy"><span class="axis-number">{axis.number}</span><h3>{axis.title}</h3><p>{axis.text}</p><span class="text-link" aria-hidden="true">Explore research <span>↗</span></span></div>
         </a>
       ))}
@@ -78,12 +78,12 @@ const activityAssets = {
     )}
   </section>
 
-  <section class="outputs-v2">
+  <section class="outputs-v2 outputs-v22">
     <div class="section-heading section-heading--compact"><p class="eyebrow">Research outputs</p><h2>Explore the work</h2></div>
     <div class="output-grid">
-      <a class="output-item output-item--publications" href="/publications"><div class="output-image"><img src="/images/v2/web/mediterranean-marine-heatwaves-darmaraki.webp" alt="Detail of a scientific figure on Mediterranean marine heatwaves" loading="lazy" /></div><div class="output-copy"><span class="output-index">01</span><h3>Selected publications</h3><span aria-hidden="true">↗</span></div></a>
-      <a class="output-item output-item--data" href="/research-data"><div class="output-image"><img src="/images/v2/web/drias-tracc-tropical-nights-france-plus4c.webp" alt="DRIAS and TRACC regional climate information map" loading="lazy" /></div><div class="output-copy"><span class="output-index">02</span><h3>Research data</h3><span aria-hidden="true">↗</span></div></a>
-      <a class="output-item output-item--expertise" href="/scientific-expertise"><div class="expertise-graphic" aria-hidden="true"><span>ASSESSMENT</span><span>EXPERTISE</span><span>CLIMATE SERVICES</span></div><div class="output-copy"><span class="output-index">03</span><h3>Scientific expertise</h3><span aria-hidden="true">↗</span></div></a>
+      <a class="output-item output-item--publications" href="/publications"><div class="output-image"><img src="/images/v2.2/05_publications_icon.png" alt="Editorial illustration of scientific publications" width="900" height="900" loading="lazy" decoding="async" /></div><div class="output-copy"><span class="output-index">01</span><h3>Selected publications</h3><span aria-hidden="true">↗</span></div></a>
+      <a class="output-item output-item--data" href="/research-data"><div class="output-image"><img src="/images/v2.2/06_research_data_icon.png" alt="Editorial illustration of research data" width="900" height="900" loading="lazy" decoding="async" /></div><div class="output-copy"><span class="output-index">02</span><h3>Research data</h3><span aria-hidden="true">↗</span></div></a>
+      <a class="output-item output-item--expertise" href="/scientific-expertise"><div class="output-image"><img src="/images/v2.2/07_expertise_icon.png" alt="Editorial illustration of scientific expertise" width="900" height="900" loading="lazy" decoding="async" /></div><div class="output-copy"><span class="output-index">03</span><h3>Scientific expertise</h3><span aria-hidden="true">↗</span></div></a>
     </div>
   </section>
 
