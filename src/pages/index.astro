@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProfileLinks from '../components/ProfileLinks.astro';
+import projects from '../../data/projects.yml';
+import communities from '../../data/communities.yml';
+import news from '../../data/news.yml';
+
+const activities = [communities.find((item) => item.name === 'Med-CORDEX'), ...projects.filter((item) => ['RIVIERADE', 'FUTURA', 'MEDIATION'].includes(item.name))].filter(Boolean);
+const latest = news.filter((item) => item.published).sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 3);
+
+const researchAxes = [
+  { number: '01', title: 'Regional climate modelling', text: 'Regional climate and Earth system modelling.', href: '/research#1-regional-climate-modelling', image: '/images/v2.2/01_regional_climate_modelling.png', alt: 'Editorial illustration of regional climate modelling', className: 'research-axis--model' },
+  { number: '02', title: 'Euro-Mediterranean climate and sea', text: 'Atmosphere, ocean and regional forcings.', href: '/research#2-euro-mediterranean-climate-and-sea', image: '/images/v2.2/02_euro_mediterranean_climate.png', alt: 'Editorial illustration of Europe and the Mediterranean Sea', className: 'research-axis--mediterranean' },
+  { number: '03', title: 'Regional climate phenomena and extremes', text: 'Processes shaping extremes and circulation.', href: '/research#3-regional-climate-phenomena-and-extremes', image: '/images/v2.2/03_climate_phenomena_extremes.png', alt: 'Editorial illustration of climate phenomena and extremes', className: 'research-axis--extremes' },
+  { number: '04', title: 'Regional climate information', text: 'Climate projections, services and adaptation.', href: '/research#4-regional-climate-information', image: '/images/v2.2/04_regional_climate_information.png', alt: 'Editorial illustration of regional climate information', className: 'research-axis--information' },
+];
+
+const activityAssets = {
+  'Med-CORDEX': { kind: 'logo', src: '/images/v2/web/med-cordex-logo-simple.png', alt: 'Med-CORDEX logo' },
+  RIVIERADE: { kind: 'logo', src: '/images/v2/web/rivierade-logo-official.svg', alt: 'RIVIERADE official logo' },
+  FUTURA: { kind: 'logo', src: '/images/v2/web/futura-logo-full-transparent.png', alt: 'FUTURA logo' },
+  MEDIATION: { kind: 'wordmark' },
+};
+---
+
+<BaseLayout>
+  <section class="hero hero-v2">
+    <div class="hero-copy">
+      <p class="eyebrow">CNRM · Météo-France / CNRS · Toulouse, France</p>
+      <h1>Samuel Somot</h1>
+      <p class="hero-role">Climate scientist — Regional climate & Earth system modelling</p>
+      <p class="hero-line">Understanding climate change at regional scales, from Europe to the Mediterranean Sea.</p>
+      <div class="actions"><a class="button" href="/research">Research</a><a class="button secondary" href="/publications">Publications</a></div>
+    </div>
+    <div class="hero-composition">
+      <figure class="hero-map"><img src="/images/v2/web/mediterranean-bathymetry-hero.webp" alt="Bathymetric map of the Mediterranean Sea" width="1600" height="900" fetchpriority="high" /></figure>
+      <figure class="hero-portrait"><img src="/images/v2/web/samuel-somot-portrait.webp" alt="Portrait of Samuel Somot" width="598" height="900" /></figure>
+      <div class="hero-transition" aria-hidden="true"></div>
+      <div class="hero-annotation" aria-hidden="true"><span>regional scales</span><svg viewBox="0 0 150 36"><path d="M4 25c33-21 75 8 137-17" /></svg></div>
+    </div>
+  </section>
+
+  <section class="research-overview research-overview--v22">
+    <div class="section-heading section-heading--compact"><p class="eyebrow">Research at a glance</p><h2>Connecting processes, models and regional information</h2></div>
+    <div class="research-axis-grid">
+      {researchAxes.map((axis) => (
+        <a class:list={['research-axis', axis.className]} href={axis.href}>
+          <div class="research-axis-visual"><img src={axis.image} alt={axis.alt} width="900" height="900" loading="lazy" decoding="async" /></div>
+          <div class="research-axis-copy"><span class="axis-number">{axis.number}</span><h3>{axis.title}</h3><p>{axis.text}</p><span class="text-link" aria-hidden="true">Explore research <span>↗</span></span></div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="activities-v2">
+    <div class="section-heading section-heading--compact"><p class="eyebrow">Current activities</p><h2>Projects and scientific communities</h2></div>
+    <div class="activity-grid">
+      {activities.map((item, index) => {
+        const asset = activityAssets[item.name];
+        return (
+          <a class:list={['activity-item', `activity-item--${index + 1}`]} href="/projects-communities">
+            <div class:list={['activity-identity', { 'activity-identity--wordmark': asset.kind === 'wordmark' }]}>
+              {asset.kind === 'logo' ? <img src={asset.src} alt={asset.alt} loading="lazy" /> : <span>MEDIATION</span>}
+            </div>
+            <div class="activity-copy"><p class="activity-meta">{item.role || item.status}</p><h3>{item.name}</h3><span class="activity-arrow" aria-hidden="true">↗</span></div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class:list={['news-v2', { 'news-v2--empty': latest.length === 0 }]}>
+    <div class="section-heading split section-heading--compact"><div><p class="eyebrow">Latest news</p><h2>From research and the community</h2></div><a class="section-link" href="https://www.linkedin.com/in/sam-somot/" target="_blank" rel="noreferrer">Follow me on LinkedIn ↗</a></div>
+    {latest.length ? (
+      <div class="news-grid">{latest.map((item) => <a class="news-item" href="/news">{item.image && <img src={item.image} alt="" loading="lazy" />}<div><p class="activity-meta">{item.date}</p><h3>{item.title}</h3><p>{item.summary}</p></div></a>)}</div>
+    ) : (
+      <div class="empty-state empty-state--compact"><p>No news entries are published yet.</p><a href="/news">View the news archive structure →</a></div>
+    )}
+  </section>
+
+  <section class="outputs-v2 outputs-v22">
+    <div class="section-heading section-heading--compact"><p class="eyebrow">Research outputs</p><h2>Explore the work</h2></div>
+    <div class="output-grid">
+      <a class="output-item output-item--publications" href="/publications"><div class="output-image"><img src="/images/v2.2/05_publications_icon.png" alt="Editorial illustration of scientific publications" width="900" height="900" loading="lazy" decoding="async" /></div><div class="output-copy"><span class="output-index">01</span><h3>Selected publications</h3><span aria-hidden="true">↗</span></div></a>
+      <a class="output-item output-item--data" href="/research-data"><div class="output-image"><img src="/images/v2.2/06_research_data_icon.png" alt="Editorial illustration of research data" width="900" height="900" loading="lazy" decoding="async" /></div><div class="output-copy"><span class="output-index">02</span><h3>Research data</h3><span aria-hidden="true">↗</span></div></a>
+      <a class="output-item output-item--expertise" href="/scientific-expertise"><div class="output-image"><img src="/images/v2.2/07_expertise_icon.png" alt="Editorial illustration of scientific expertise" width="900" height="900" loading="lazy" decoding="async" /></div><div class="output-copy"><span class="output-index">03</span><h3>Scientific expertise</h3><span aria-hidden="true">↗</span></div></a>
+    </div>
+  </section>
+
+  <section class="profiles profiles-v2"><div><p class="eyebrow">Profiles</p><h2>Find my scientific work online</h2></div><ProfileLinks /></section>
+</BaseLayout>

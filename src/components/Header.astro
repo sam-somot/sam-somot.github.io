@@ -1,0 +1,24 @@
+---
+const nav = [
+  ['Home','/'],['Research','/research'],['Projects & Communities','/projects-communities'],
+  ['Publications','/publications'],['Research Data','/research-data'],
+  ['Teaching & Outreach','/teaching-outreach'],['About','/about']
+];
+const path = Astro.url.pathname;
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Samuel Somot — Home"><span class="brand-mark">SS</span><span>Samuel Somot</span></a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav id="main-nav" aria-label="Main navigation">
+    {nav.map(([label, href]) => <a href={href} aria-current={path === href ? 'page' : undefined}>{label}</a>)}
+  </nav>
+</header>
+<script>
+  const button = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('#main-nav');
+  button?.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('open', !open);
+  });
+</script>

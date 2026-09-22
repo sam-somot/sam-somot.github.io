@@ -1,0 +1,11 @@
+---
+interface Props { title: string; eyebrow?: string; href?: string; featured?: boolean; }
+const { title, eyebrow, href, featured = false } = Astro.props;
+const Tag = href ? 'a' : 'article';
+---
+<Tag class:list={['card', {featured}]} href={href}>
+  {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+  <h3>{title}</h3>
+  <div class="card-content"><slot /></div>
+  {href && <span class="card-arrow" aria-hidden="true">↗</span>}
+</Tag>

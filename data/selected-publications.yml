@@ -1,0 +1,49 @@
+- key: somot-2006
+  citation: Somot et al. 2006
+  title: "Transient climate change scenario simulation of the Mediterranean Sea for the twenty-first century using a high-resolution ocean circulation model."
+  authors: "Somot, S., Sevault, F. & Déqué, M."
+  details: "Climate Dynamics, 27, 851–879 (2006)."
+  doi: "10.1007/s00382-006-0167-z"
+  why: "The first ever regional climate projection for the Mediterranean Sea, this study also provided early evidence of a possible weakening of Mediterranean deep-water formation under climate change."
+- key: somot-2008
+  citation: Somot et al. 2008
+  title: "21st century climate change scenario for the Mediterranean using a coupled atmosphere–ocean regional climate model."
+  authors: "Somot, S., Sevault, F., Déqué, M. & Crépon, M."
+  details: "Global and Planetary Change, 63(2–3), 112–126 (2008)."
+  doi: "10.1016/j.gloplacha.2007.10.003"
+  why: "This paper introduced our first coupled regional atmosphere–ocean climate model for the Mediterranean. It marked an important step towards the Regional Climate System Models (RCSMs), and later Regional Earth System Models (RESMs), that became a central part of my research."
+- key: ruti-2015
+  citation: Ruti et al. 2016 — Med-CORDEX
+  title: "Med-CORDEX Initiative for Mediterranean Climate Studies."
+  authors: "Ruti, P. M., Somot, S., Giorgi, F., et al."
+  details: "Bulletin of the American Meteorological Society, 97(7), 1187–1208 (2016)."
+  doi: "10.1175/BAMS-D-14-00176.1"
+  why: "This paper introduced the Med-CORDEX initiative and its coordinated approach to regional climate and Earth system modelling in the Mediterranean, a scientific community in which I have been deeply involved since its creation."
+- key: somot-2018
+  citation: Somot et al. 2018
+  title: "Characterizing, modelling and understanding the climate variability of the deep water formation in the North-Western Mediterranean Sea."
+  authors: "Somot, S., Houpert, L., Sevault, F., et al."
+  details: "Climate Dynamics, 51, 1179–1210 (2018)."
+  doi: "10.1007/s00382-016-3295-0"
+  why: "The outcome of nearly ten years of work combining observations and regional climate modelling to better understand the strong interannual variability of deep-water formation in the north-western Mediterranean Sea."
+- key: boe-2020
+  citation: Boé et al. 2020
+  title: "Large discrepancies in summer climate change over Europe as projected by global and regional climate models: causes and consequences."
+  authors: "Boé, J., Somot, S., Corre, L. & Nabat, P."
+  details: "Climate Dynamics, 54, 2981–3002 (2020)."
+  doi: "10.1007/s00382-020-05153-1"
+  why: "This study identified a major inconsistency between global and regional climate model projections of summer climate change over Europe, raising important questions about the interpretation and use of regional climate projections."
+- key: nabat-2014
+  citation: Nabat et al. 2014
+  title: "Contribution of anthropogenic sulfate aerosols to the changing Euro-Mediterranean climate since 1980."
+  authors: "Nabat, P., Somot, S., Mallet, M., Sanchez-Lorenzo, A. & Wild, M."
+  details: "Geophysical Research Letters, 41(15), 5605–5611 (2014)."
+  doi: "10.1002/2014GL060798"
+  why: "This study demonstrated the major role played by anthropogenic aerosols in the observed and simulated evolution of the European and Mediterranean climate over recent decades."
+- key: darmaraki-2019
+  citation: Darmaraki et al. 2019
+  title: "Future evolution of Marine Heatwaves in the Mediterranean Sea."
+  authors: "Darmaraki, S., Somot, S., Sevault, F., et al."
+  details: "Climate Dynamics, 53, 1371–1392 (2019)."
+  doi: "10.1007/s00382-019-04661-z"
+  why: "The first multi-model climate projection study of Mediterranean marine heatwaves based on the Med-CORDEX regional climate model ensemble, illustrating the value of coordinated coupled regional modelling for studying future ocean extremes."

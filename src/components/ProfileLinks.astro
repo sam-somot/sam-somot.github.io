@@ -1,0 +1,5 @@
+---
+import links from '../../data/links.yml';
+const active = links.filter((item) => item.active && item.url);
+---
+<div class="profile-links">{active.map((item) => <a href={item.url} target="_blank" rel="me noreferrer">{item.label}<span>↗</span></a>)}</div>

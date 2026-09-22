@@ -1,0 +1,56 @@
+- name: RIVIERADE
+  status: current
+  start: 2026-01
+  role: WP4 leader
+  featured: true
+- name: TRACCS-LOCALISING
+  status: current
+  featured: false
+- name: IMPETUS4CHANGE
+  status: current
+  featured: false
+- name: Socle Métropole
+  type: internal Météo-France project
+  status: current
+  featured: false
+- name: FUTURA
+  start: 2026-06
+  status: current
+  featured: true
+- name: MEDIATION
+  type: national project
+  role: CNRM Principal Investigator (PI)
+  status: current
+  featured: true
+- name: EUCP
+  programme: H2020
+  role: CNRM PI
+  status: past
+- name: PopN'Co
+  programme: ANR
+  role: CNRM PI
+  status: past
+- name: REMEMBER
+  programme: ANR
+  role: CNRM PI + WP5 co-leader
+  status: past
+- name: CLIM-RUN
+  programme: FP7
+  role: WP2 leader
+  status: past
+- name: C3S PRINCIPLES
+  programme: Copernicus C3S
+  role: CNRM PI
+  status: past
+- name: ENSEMBLES
+  programme: FP6
+  role: participation
+  status: past
+- name: PRUDENCE
+  programme: FP5
+  role: participation
+  status: past
+- name: MERCURE
+  programme: FP4
+  role: participation
+  status: past

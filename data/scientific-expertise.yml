@@ -1,0 +1,35 @@
+- id: medecc-mar1
+  organization: MedECC
+  year: 2020
+  title: "First Mediterranean Assessment Report (MAR1) — Chapter 2: Drivers of Change"
+  role: Lead Author
+  featured: true
+  description: "Lead Author of the “Drivers of Change” chapter of the First Mediterranean Assessment Report (MAR1), the first comprehensive scientific assessment of climate and environmental change, its impacts and associated risks across the Mediterranean Basin."
+  reference: "Cherif S, Doblas-Miranda E, Lionello P, Borrego C, Giorgi F, Iglesias A, Jebari S, Mahmoudi E, Moriondo M, Pringault O, Rilov G, Somot S, Tsikliras A, Vila M, Zittis G (2020). Drivers of change. In: Climate and Environmental Change in the Mediterranean Basin – Current Situation and Risks for the Future. First Mediterranean Assessment Report, Cramer W, Guiot J, Marini K (eds.), Union for the Mediterranean, Plan Bleu, UNEP/MAP, Marseille, France, pp. 59–180."
+  url: https://www.medecc.org/first-mediterranean-assessment-report-mar1/
+- id: ipcc-ar4-wgi
+  organization: IPCC
+  year: 2007
+  title: "AR4 Working Group I — Chapter 11: Regional Climate Projections"
+  role: Contributing Author
+- id: ipcc-ar6-wgi
+  organization: IPCC
+  year: 2021
+  title: "AR6 Working Group I — Atlas"
+  reference: Gutiérrez et al. (2021)
+  role: Contributing Author
+  description: "Contributing Author to the regional climate assessment of the IPCC AR6 Working Group I Atlas, which synthesizes observed and projected climate change information across world regions."
+- id: ipcc-ar6-wgii
+  organization: IPCC
+  year: 2022
+  title: "AR6 Working Group II — Cross-Chapter Paper 4: Mediterranean Region"
+  role: Contributing Author
+  description: "Contributing Author to the Mediterranean regional assessment of the IPCC Sixth Assessment Report, addressing climate change, impacts, risks and adaptation across the Mediterranean Basin."
+- id: meteo-france-climate-services
+  organization: Météo-France
+  since: 2018
+  title: Météo-France National Climate Services
+  role: Scientific expert
+  featured: true
+  description: "Scientific expert contributing to the development of reference climate information for the French national climate services, including DRIAS-2020, TRACC-2023 and Socle Métropole. This work supports the production, scientific evaluation and interpretation of regional climate projections used for climate-change adaptation in France."
+  url: https://www.drias-climat.fr/
