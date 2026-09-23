@@ -20,7 +20,7 @@
   programme: "PPR TRACCS"
   keywords: ["Coupled Regional Climate Modelling", "RCM Emulators", "Local climate information"]
   url: "https://pepr-traccs.fr/projet/pc10-localising/"
-  logo:
+  logo: "/images/v2/web/illustration_TRACCS_PC10.png"
   featured: true
 
 - name: IMPETUS4CHANGE
