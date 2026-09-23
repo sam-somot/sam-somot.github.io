@@ -1,0 +1,23 @@
+- src: /images/v2/web/cnrm-rcsm-coupled-system-diagram.webp
+  width: 1100
+  height: 1022
+  alt: Diagram of the coupled CNRM regional climate system model components
+  caption: CNRM-RCSM6
+
+- src: /images/v2/web/cnrm-rcsm-euromed-domain-topography-bathymetry.webp
+  width: 1200
+  height: 980
+  alt: Euro-Mediterranean model domain showing topography and bathymetry with scales
+  caption: Sevault et al. 2014 (Tellus)
+
+- src: /images/v2/web/mediterranean-marine-heatwaves-darmaraki.webp
+  width: 1200
+  height: 849
+  alt: Chart of Mediterranean marine heatwave intensity, duration and spatial extent
+  caption: Darmaraki et al. 2019 (Climate Dynamics)
+
+- src: /images/v2/web/drias-tracc-tropical-nights-france-plus4c.webp
+  width: 1000
+  height: 1088
+  alt: DRIAS map of tropical nights in France at a plus four degree warming level
+  caption: DRIAS – Les futurs du climat
