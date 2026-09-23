@@ -1,0 +1,24 @@
+---
+interface Community {
+  name: string;
+  role?: string | null;
+  status: 'active' | 'finished';
+  scope: 'national' | 'international';
+  period?: string | null;
+  keywords?: string[] | null;
+  url?: string | null;
+  logo?: string | null;
+  logos?: { src: string; alt: string }[];
+  featured?: boolean;
+}
+interface Props { community: Community; }
+const { community } = Astro.props;
+---
+<article class:list={['community-entry', { 'community-entry--featured': community.featured }]}>
+  {community.logos?.length ? <div class="community-entry__logos">{community.logos.map((logo) => <img src={logo.src} alt={logo.alt} loading="lazy" />)}</div> : community.logo && <img class="community-entry__logo" src={community.logo} alt={`${community.name} logo`} loading="lazy" />}
+  <h4>{community.name}</h4>
+  <p class="community-entry__meta">{[community.scope, community.period].filter(Boolean).join(' · ')}</p>
+  {community.role && <p class="community-entry__role">{community.role}</p>}
+  {community.keywords?.length && <ul class="community-entry__keywords" aria-label={`Keywords for ${community.name}`}>{community.keywords.map((keyword) => <li>{keyword}</li>)}</ul>}
+  {community.url && <a class="community-entry__link" href={community.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${community.name} website`}>Community website <span aria-hidden="true">↗</span></a>}
+</article>
