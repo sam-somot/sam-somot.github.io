@@ -295,6 +295,7 @@
 .community-entry__logo{display:block;max-width:min(100%,220px);max-height:76px;object-fit:contain;object-position:left center;margin-bottom:.8rem}
 .community-entry__logos{display:flex;align-items:center;gap:1rem;margin-bottom:.8rem}
 .community-entry__logos img{width:calc(50% - .5rem);height:68px;object-fit:contain;object-position:left center}
+.community-entry__logos img:first-child,.activity-community__logos img:first-child{background:#10283a;border-radius:3px;padding:.25rem}
 .community-entry h4{font-size:1.28rem;line-height:1.2;margin:0 0 .5rem;overflow-wrap:anywhere}
 .community-entry__meta{font-size:.94rem;color:var(--blue2);font-weight:700;text-transform:capitalize;margin:0 0 .35rem}
 .community-entry__role{font-size:1rem;color:var(--muted);margin:0 0 .65rem}
