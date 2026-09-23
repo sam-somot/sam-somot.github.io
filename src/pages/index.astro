@@ -5,7 +5,8 @@ import projects from '../../data/projects.yml';
 import communities from '../../data/communities.yml';
 import news from '../../data/news.yml';
 
-const activities = [communities.find((item) => item.name === 'Med-CORDEX'), ...projects.filter((item) => item.status === 'current' && item.featured)].filter(Boolean);
+const featuredCommunities = communities.filter((item) => item.status === 'active' && item.featured);
+const activities = [featuredCommunities[0], ...projects.filter((item) => item.status === 'current' && item.featured)].filter(Boolean);
 const latest = news.filter((item) => item.published).sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 3);
 
 const researchAxes = [
@@ -15,7 +16,7 @@ const researchAxes = [
   { number: '04', title: 'Regional climate information', text: 'Climate projections, services and adaptation.', href: '/research#4-regional-climate-information', image: '/images/v2.2/04_regional_climate_information.png', alt: 'Editorial illustration of regional climate information', className: 'research-axis--information' },
 ];
 
-const communityLogo = '/images/v2/web/med-cordex-logo-simple.png';
+const additionalCommunities = featuredCommunities.slice(1);
 ---
 
 <BaseLayout>
@@ -51,7 +52,7 @@ const communityLogo = '/images/v2/web/med-cordex-logo-simple.png';
     <div class="section-heading section-heading--compact"><p class="eyebrow">Current activities</p><h2>Projects and scientific communities</h2></div>
     <div class="activity-grid activity-grid--projects">
       {activities.map((item, index) => {
-        const logo = 'logo' in item ? item.logo : communityLogo;
+        const logo = item.logo;
         return (
           <a class:list={['activity-item', `activity-item--${index + 1}`]} href="/projects-communities">
             <div class:list={['activity-identity', { 'activity-identity--plain': !logo }]}>
@@ -62,6 +63,12 @@ const communityLogo = '/images/v2/web/med-cordex-logo-simple.png';
         );
       })}
     </div>
+    {additionalCommunities.length > 0 && <div class="activity-community-list" aria-label="Featured scientific communities">
+      {additionalCommunities.map((item) => <a href="/projects-communities" class="activity-community">
+        {item.logos?.length ? <span class="activity-community__logos">{item.logos.map((logo) => <img src={logo.src} alt={logo.alt} loading="lazy" />)}</span> : item.logo && <img src={item.logo} alt={`${item.name} logo`} loading="lazy" />}
+        <span class="activity-community__copy"><strong>{item.name}</strong><small>{item.role}</small></span><span aria-hidden="true">↗</span>
+      </a>)}
+    </div>}
   </section>
 
   <section class:list={['news-v2', { 'news-v2--empty': latest.length === 0 }]}>

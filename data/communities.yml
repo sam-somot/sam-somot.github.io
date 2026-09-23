@@ -1,30 +1,124 @@
 - name: Med-CORDEX
+  role: "Steering Committee Lead"
   status: active
-  role: Leader
+  scope: international
+  period: "since 2009"
+  keywords: ["Mediterranean climate", "Coupled Regional Climate System Modelling", "CORDEX"]
+  url: "https://med-cordex.github.io/"
+  logo: "/images/v2/web/med-cordex-logo-simple.png"
   featured: true
+
 - name: EURO-CORDEX
+  role: "CNRM Principal Investigator"
   status: active
-  role: CNRM Principal Investigator
+  scope: international
+  period: "since 2009"
+  keywords: ["European climate", "Regional climate modelling", "CORDEX"]
+  url: "https://www.euro-cordex.net/"
+  logo: "/images/communities/euro-cordex-logo.jpg"
   featured: true
+
 - name: CORDEX
+  role: "Med-CORDEX and JWG-ROCP Point of Contact"
   status: active
-  role: CNRM Principal Investigator
+  scope: international
+  period:
+  keywords: ["Regional climate modelling", "Local climate information", "International coordination"]
+  url: "https://cordex.org/"
+  logo: "/images/communities/cordex-logo-positive.png"
+  featured: false
+
+- name: JWG-ROCP
+  role: "Co-Chair"
+  status: active
+  scope: international
+  period: "since 2026"
+  keywords: ["Regional ocean climate projections", "Regional ocean modelling", "CORDEX–CLIVAR"]
+  url: "https://www.clivar.org/clivarcordex-jwg-rocp-working-group"
+  logo:
+  logos:
+    - src: "/images/communities/clivar-logo-horizontal.png"
+      alt: "CLIVAR logo"
+    - src: "/images/communities/cordex-logo-positive.png"
+      alt: "CORDEX logo"
   featured: true
+
 - name: CLIMERI-France
+  role: "Scientific Committee member · Regional Climate Modelling representative"
   status: active
-  role: Member of the Scientific Committee and Regional Climate Modelling representative
-  featured: false
-- name: SiMed
+  scope: national
+  period:
+  keywords: ["Climate modelling", "National Research Infrastructure", "CORDEX, CMIP"]
+  url: "https://climeri-france.fr/"
+  logo:
+  featured: true
+
+- name: SiMED
+  role: "Participant"
   status: active
-  role: Participation
+  scope: national
+  period: "since 2007"
+  keywords: ["Mediterranean Sea", "Ocean modelling", "NEMO Mediterranean configurations"]
+  url: "https://confluence-meteofrance.atlassian.net/wiki/spaces/SiMED/overview"
+  logo:
   featured: false
+
+- name: MedCLIVAR
+  role: "Scientific Steering Group member"
+  status: active
+  scope: international
+  period: "since 2003"
+  keywords: ["Mediterranean climate study", "Climate impacts and risks", "International network"]
+  url: "https://www.medclivar.eu/"
+  logo:
+  featured: false
+
 - name: MISTRALS
-  status: historical
-  role: Leader of the regiional climate modelling activities, Med-CORDEX
-  completed: 2020
+  role: "Leader of regional climate modelling activities · Med-CORDEX"
+  status: finished
+  scope: national
+  period: "2010–2020"
+  keywords: ["Mediterranean environment", "Integrated research", "Regional climate modelling"]
+  url: "https://www.mistrals-home.org/"
+  logo:
   featured: false
+
 - name: HyMeX
-  status: historical
-  role: Leader of the regiional climate modelling activities, TTM3
-  completed: 2020
+  role: "Leader of the MSWB and regional climate modelling activities"
+  status: finished
+  scope: international
+  period: "2010–2020"
+  keywords: ["Mediterranean Sea Water Budget", "Heavy Precipitation Events", "Deep Water Formation"]
+  url: "https://www.hymex.org/"
+  logo:
+  featured: false
+
+- name: ChArMEx
+  role: "Participant"
+  status: finished
+  scope: international
+  period: "2010–2020"
+  keywords: ["Mediterranean", "Atmospheric chemistry", "Aerosols"]
+  url: "https://charmex.lsce.ipsl.fr/"
+  logo:
+  featured: false
+
+- name: MISSTERRE
+  role: "Participant"
+  status: finished
+  scope: national
+  period: "2003–2016"
+  keywords: ["Climate modelling", "National coordination"]
+  url: "https://cmc.ipsl.fr/national-projects/french-project-missterre/"
+  logo:
+  featured: false
+
+- name: GASTON
+  role: "Participant"
+  status: finished
+  scope: national
+  period: "before 2003"
+  keywords: ["Climate modelling", "National coordination"]
+  url:
+  logo:
   featured: false
