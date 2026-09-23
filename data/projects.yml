@@ -1,65 +1,285 @@
+# PageWebPro — Projects
+# Consolidated 2026-09-23
+# Years only for display. Empty fields mean not reliably established.
+
+# CURRENT PROJECTS
 - name: RIVIERADE
-  programme: HEU
+  role: "WP4 leader · CNRM PI"
   status: current
-  start: 2026-01
-  role: CNRM Principal Investigator and WP4 leader
+  period: "2026–2029"
+  programme: "Horizon Europe"
+  keywords: ["European seas", "Regional Ocean Climate Projections", "Climate services"]
+  url: "https://cordis.europa.eu/project/id/101181983"
+  logo: "/images/v2/web/rivierade-logo-official.svg"
   featured: true
+
 - name: TRACCS-LOCALISING
-  programme: PEPR
+  role: "Lead PC10"
   status: current
-  start: 2024-01
-  role: Project Principal Investigator
+  period: "2023–2031"
+  programme: "PPR TRACCS"
+  keywords: ["Coupled Regional Climate Modelling", "RCM Emulators", "Local climate information"]
+  url: "https://pepr-traccs.fr/projet/pc10-localising/"
+  logo:
   featured: true
+
 - name: IMPETUS4CHANGE
-  programme: HEU
+  role: "CNRM PI"
   status: current
-  role: CNRM Principal Investigator and WP3 co-leader
+  period: "2022–2027"
+  programme: "Horizon Europe"
+  keywords: ["Km-scale regional climate models", "RCM Emulators", "Climate information for European cities"]
+  url: "https://cordis.europa.eu/project/id/101081555"
+  logo:
   featured: true
-- name: Socle Métropole
-  programme: Météo-France project
-  status: current
-  role: Project co-leader
-  featured: true
-- name: FUTURA
-  programme: HEU
-  start: 2026-06
-  status: current
-  role: participation
-  featured: true
+
 - name: MEDIATION
-  programme: PPR Ocean & Climat
-  status: current  
-  role: CNRM Principal Investigator
+  role: "CNRM PI"
+  status: current
+  period: "2022–2028"
+  programme: "PPR Ocean & Climate"
+  keywords: ["Digital twin of the ocean", "Mediterranean ocean climate projections", "Ocean biogeochemistry and fisheries"]
+  url: "https://anr.fr/ProjetIA-22-POCE-0003"
+  logo:
   featured: false
+
+- name: FUTURA
+  role:
+  status: current
+  period: "2026–2030"
+  programme: "Horizon Europe"
+  keywords: ["Multiverse", "Climate modelling", "CORDEX-CMIP7"]
+  url: "https://cordis.europa.eu/project/id/101295156"
+  logo: "/images/v2/web/futura-logo-full-transparent.png"
+  featured: true
+
+# PAST PROJECTS
+- name: "PopN'Co"
+  role: "CNRM PI"
+  status: past
+  period: "2022–2025"
+  programme: "ANR"
+  keywords: ["Marine connectivity", "Coastal ecosystems", "Regional ocean climate projections"]
+  url:
+  logo:
+  featured: false
+
 - name: EUCP
-  programme: H2020
-  role: CNRM Principal Investigator
+  role: "CNRM PI"
   status: past
-- name: PopN'Co
-  programme: ANR
-  role: CNRM Principal Investigator
+  period: "2017–2022"
+  programme: "Horizon 2020"
+  keywords: ["Km-scale regional climate model", "RCM emulators", "Europe"]
+  url: "https://cordis.europa.eu/project/id/776613"
+  logo:
+  featured: false
+
+- name: PRINCIPLES
+  role: "CNRM PI"
   status: past
+  period: "2017–2021"
+  programme: "Copernicus C3S"
+  keywords: ["Regional climate projections", "EURO-CORDEX", "Europe"]
+  url: "https://climate.copernicus.eu/c3s-production-european-climate-projections"
+  logo:
+  featured: false
+
+- name: MARmaED
+  role: "CNRM PI"
+  status: past
+  period: "2015–2019"
+  programme: "Marie Skłodowska-Curie ITN"
+  keywords: ["Marine heatwaves", "Climate change", "Training network"]
+  url: "https://cordis.europa.eu/project/id/675997"
+  logo:
+  featured: false
+
+- name: TANGRAM
+  role: "co-PI · CNRM PI"
+  status: past
+  period: "2015–2016"
+  programme: "ENVI-MED"
+  keywords: ["Mediterranean Sea", "Ocean climate", "Regional modelling"]
+  url:
+  logo:
+  featured: false
+
+- name: PlankMed
+  role:
+  status: past
+  period: "2014–2015"
+  programme: "MerMex"
+  keywords: ["Mediterranean Sea", "Marine ecosystems", "Plankton"]
+  url:
+  logo:
+  featured: false
+
+- name: Med-MaHb
+  role: "CNRM PI"
+  status: past
+  period: "2014–2015"
+  programme: "ENVI-MED"
+  keywords: ["Mediterranean Sea", "Heat Budget", "Climate change"]
+  url:
+  logo:
+  featured: false
+
+- name: CLIHMag
+  role: "CNRM PI"
+  status: past
+  period: "2014–2015"
+  programme: "ENVI-MED"
+  keywords: ["Mediterranean", "Hydrology", "Climate change"]
+  url:
+  logo:
+  featured: false
+
 - name: REMEMBER
-  programme: ANR
-  role: CNRM Principal Investigator and WP5 co-leader
+  role: "CNRM PI · WP5 co-leader"
   status: past
+  period: "2012–2016"
+  programme: "ANR"
+  keywords: ["Regional climate system model", "Mediterranean", "Model development"]
+  url: "https://anr.fr/Projet-ANR-12-SENV-0001"
+  logo:
+  featured: false
+
+- name: ASICS-MED
+  role:
+  status: past
+  period: "2012–2016"
+  programme: "ANR"
+  keywords: ["Mediterranean Sea", "Dense water formation", "Ocean mesoscale"]
+  url: "https://anr.fr/Projet-ANR-12-BS06-0003"
+  logo:
+  featured: false
+
+- name: IMPACT2C
+  role:
+  status: past
+  period: "2011–2015"
+  programme: "FP7"
+  keywords: ["Climate impacts", "EURO-CORDEX", "Regional climate modelling"]
+  url: "https://cordis.europa.eu/project/id/282746"
+  logo:
+  featured: false
+
 - name: CLIM-RUN
-  programme: FP7
-  role: WP2 leader
+  role: "WP2 leader · CNRM PI"
   status: past
-- name: C3S PRINCIPLES
-  programme: Copernicus C3S
-  role: CNRM Principal Investigator
+  period: "2011–2014"
+  programme: "FP7"
+  keywords: ["Climate services", "Mediterranean", "Regional climate modelling"]
+  url: "https://cordis.europa.eu/project/id/265192"
+  logo:
+  featured: false
+
+- name: SCAMPEI
+  role:
   status: past
+  period: "2009–2011"
+  programme: "ANR"
+  keywords: ["High-resolution climate", "France", "Snow and hydrology"]
+  url: "https://www.cnrm.meteo.fr/scampei/"
+  logo:
+  featured: false
+
+- name: VURCA
+  role:
+  status: past
+  period: "2009–2012"
+  programme: "ANR"
+  keywords: ["Urban climate", "Heatwaves", "Climate impacts"]
+  url: "https://anr.fr/fileadmin/documents/2013/Cahier-ANR-7-changements-globaux.pdf"
+  logo:
+  featured: false
+
+- name: CANTICO
+  role: "French PI"
+  status: past
+  period: "2008–2010"
+  programme: "ERA-Net CIRCLE-MED"
+  keywords: ["Gulf of Gabès", "Ocean regional climate projections", "Climate risk"]
+  url: "https://www.cmcc.it/projects/cantico-climate-and-local-anthropogenic-drivers-and-impacts-for-the-tunisian-coastal-area"
+  logo:
+  featured: false
+
+- name: MEDUP
+  role:
+  status: past
+  period:
+  programme: "ANR"
+  keywords: ["Mediterranean", "Extreme events", "Uncertainty"]
+  url: "https://anr.fr/fileadmin/documents/2013/Cahier-ANR-7-changements-globaux.pdf"
+  logo:
+  featured: false
+
+- name: CECILIA
+  role:
+  status: past
+  period: "2006–2009"
+  programme: "FP6"
+  keywords: ["Regional climate modelling", "High resolution", "Eastern Europe"]
+  url:
+  logo:
+  featured: false
+
+- name: CICLE
+  role:
+  status: past
+  period: "2005–2008"
+  programme: "ANR"
+  keywords: ["Coupled regional climate modelling", "High-performance computing", "Ocean zoom"]
+  url: "https://anr.fr/fr/liste-des-projets-finances/?fq=5"
+  logo:
+  featured: false
+
+- name: CYPRIM
+  role:
+  status: past
+  period: "2005–2008"
+  programme: "ACI"
+  keywords: ["Extreme precipitation", "Downscaling", "Mediterranean"]
+  url:
+  logo:
+  featured: false
+
 - name: ENSEMBLES
-  programme: FP6
-  role: participation
+  role:
   status: past
+  period: "2004–2009"
+  programme: "FP6"
+  keywords: ["Regional climate modelling", "Climate projections", "Europe"]
+  url: "https://cordis.europa.eu/project/id/505539"
+  logo:
+  featured: false
+
+- name: MedWater
+  role:
+  status: past
+  period: "2003–2006"
+  programme: "GICC"
+  keywords: ["Mediterranean", "Regional modelling", "Climate change"]
+  url: "https://web.lmd.jussieu.fr/~li/gicc_medwater/actualites/cr-2004-03-24.html"
+  logo:
+  featured: false
+
 - name: PRUDENCE
-  programme: FP5
-  role: participation
+  role:
   status: past
+  period: "2001–2004"
+  programme: "FP5"
+  keywords: ["Regional climate modelling", "Climate projections", "Europe"]
+  url: "https://cordis.europa.eu/project/id/EVK2-CT-2001-00132"
+  logo:
+  featured: false
+
 - name: MERCURE
-  programme: FP4
-  role: participation
+  role:
   status: past
+  period: "1997–2000"
+  programme: "FP4"
+  keywords: ["Regional climate modelling", "Model development", "Model evaluation"]
+  url: "https://cordis.europa.eu/project/id/ENV4970485"
+  logo:
+  featured: false

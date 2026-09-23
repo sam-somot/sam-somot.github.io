@@ -1,5 +1,31 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'; import Content from '../../content/projects-communities.md'; import Card from '../components/Card.astro'; import communities from '../../data/communities.yml'; import projects from '../../data/projects.yml';
-const active=communities.filter(x=>x.status==='active'), historical=communities.filter(x=>x.status==='historical'), current=projects.filter(x=>x.status==='current'), past=projects.filter(x=>x.status==='past');
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Content from '../../content/projects-communities.md';
+import Card from '../components/Card.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import communities from '../../data/communities.yml';
+import projects from '../../data/projects.yml';
+
+const active = communities.filter((item) => item.status === 'active');
+const historical = communities.filter((item) => item.status === 'historical');
+const current = projects.filter((item) => item.status === 'current');
+const past = projects.filter((item) => item.status === 'past');
 ---
-<BaseLayout title="Projects & Communities — Samuel Somot"><div class="page-stack"><article class="prose intro-only"><Content/></article><section><h2>Scientific communities & programmes</h2><div class="grid three">{active.map(x=><Card title={x.name} eyebrow="Active" featured={x.featured}/>)}</div>{historical.length>0&&<><h3 class="subheading">Historical programmes</h3><div class="grid three">{historical.map(x=><Card title={x.name} eyebrow={`Completed ${x.completed}`}/>)}</div></>}</section><section><h2>Current projects</h2><div class="grid three">{current.map(x=><Card title={x.name} eyebrow={x.role||x.type||'Current'} featured={x.featured}>{x.start&&<p>Start: {x.start}</p>}</Card>)}</div></section><section><h2>Past projects</h2><div class="grid three">{past.map(x=><Card title={x.name} eyebrow={x.programme}><p>{x.role}</p></Card>)}</div></section></div></BaseLayout>
+<BaseLayout title="Projects & Communities — Samuel Somot">
+  <div class="page-stack">
+    <article class="prose intro-only"><Content /></article>
+    <section>
+      <h2>Scientific communities & programmes</h2>
+      <div class="grid three">{active.map((item) => <Card title={item.name} eyebrow="Active" featured={item.featured} />)}</div>
+      {historical.length > 0 && <><h3 class="subheading">Historical programmes</h3><div class="grid three">{historical.map((item) => <Card title={item.name} eyebrow={`Completed ${item.completed}`} />)}</div></>}
+    </section>
+    <section class="projects-section">
+      <h2>Current projects</h2>
+      <div class="projects-grid">{current.map((project) => <ProjectCard project={project} />)}</div>
+    </section>
+    <section class="projects-section">
+      <h2>Past projects</h2>
+      <div class="projects-list">{past.map((project) => <ProjectCard project={project} compact />)}</div>
+    </section>
+  </div>
+</BaseLayout>

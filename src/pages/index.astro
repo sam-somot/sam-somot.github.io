@@ -5,7 +5,7 @@ import projects from '../../data/projects.yml';
 import communities from '../../data/communities.yml';
 import news from '../../data/news.yml';
 
-const activities = [communities.find((item) => item.name === 'Med-CORDEX'), ...projects.filter((item) => ['RIVIERADE', 'FUTURA', 'MEDIATION'].includes(item.name))].filter(Boolean);
+const activities = [communities.find((item) => item.name === 'Med-CORDEX'), ...projects.filter((item) => item.status === 'current' && item.featured)].filter(Boolean);
 const latest = news.filter((item) => item.published).sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 3);
 
 const researchAxes = [
@@ -15,12 +15,7 @@ const researchAxes = [
   { number: '04', title: 'Regional climate information', text: 'Climate projections, services and adaptation.', href: '/research#4-regional-climate-information', image: '/images/v2.2/04_regional_climate_information.png', alt: 'Editorial illustration of regional climate information', className: 'research-axis--information' },
 ];
 
-const activityAssets = {
-  'Med-CORDEX': { kind: 'logo', src: '/images/v2/web/med-cordex-logo-simple.png', alt: 'Med-CORDEX logo' },
-  RIVIERADE: { kind: 'logo', src: '/images/v2/web/rivierade-logo-official.svg', alt: 'RIVIERADE official logo' },
-  FUTURA: { kind: 'logo', src: '/images/v2/web/futura-logo-full-transparent.png', alt: 'FUTURA logo' },
-  MEDIATION: { kind: 'wordmark' },
-};
+const communityLogo = '/images/v2/web/med-cordex-logo-simple.png';
 ---
 
 <BaseLayout>
@@ -54,15 +49,15 @@ const activityAssets = {
 
   <section class="activities-v2">
     <div class="section-heading section-heading--compact"><p class="eyebrow">Current activities</p><h2>Projects and scientific communities</h2></div>
-    <div class="activity-grid">
+    <div class="activity-grid activity-grid--projects">
       {activities.map((item, index) => {
-        const asset = activityAssets[item.name];
+        const logo = 'logo' in item ? item.logo : communityLogo;
         return (
           <a class:list={['activity-item', `activity-item--${index + 1}`]} href="/projects-communities">
-            <div class:list={['activity-identity', { 'activity-identity--wordmark': asset.kind === 'wordmark' }]}>
-              {asset.kind === 'logo' ? <img src={asset.src} alt={asset.alt} loading="lazy" /> : <span>MEDIATION</span>}
+            <div class:list={['activity-identity', { 'activity-identity--plain': !logo }]}>
+              {logo ? <img src={logo} alt={`${item.name} logo`} loading="lazy" /> : <span>{item.name}</span>}
             </div>
-            <div class="activity-copy"><p class="activity-meta">{item.role || item.status}</p><h3>{item.name}</h3><span class="activity-arrow" aria-hidden="true">↗</span></div>
+            <div class="activity-copy"><p class="activity-meta">{item.role || ('programme' in item && [item.programme, item.period].filter(Boolean).join(' · ')) || item.status}</p><h3>{item.name}</h3><span class="activity-arrow" aria-hidden="true">↗</span></div>
           </a>
         );
       })}

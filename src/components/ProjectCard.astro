@@ -1,0 +1,26 @@
+---
+interface Project {
+  name: string;
+  role?: string | null;
+  status: 'current' | 'past';
+  period?: string | null;
+  programme?: string | null;
+  keywords?: string[] | null;
+  url?: string | null;
+  logo?: string | null;
+  featured?: boolean;
+}
+interface Props { project: Project; compact?: boolean; }
+const { project, compact = false } = Astro.props;
+const keywords = project.keywords ?? [];
+---
+<article class:list={['project-entry', { 'project-entry--compact': compact, 'project-entry--featured': project.featured }]}>
+  {project.logo && <img class="project-entry__logo" src={project.logo} alt={`${project.name} logo`} loading="lazy" />}
+  <h3>{project.name}</h3>
+  {(project.programme || project.period) && <p class="project-entry__meta">{[project.programme, project.period].filter(Boolean).join(' · ')}</p>}
+  {project.role && <p class="project-entry__role">{project.role}</p>}
+  {keywords.length > 0 && <ul class="project-entry__keywords" aria-label={`Keywords for ${project.name}`}>
+    {keywords.map((keyword) => <li>{keyword}</li>)}
+  </ul>}
+  {project.url && <a class="project-entry__link" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} project website`}>Project website <span aria-hidden="true">↗</span></a>}
+</article>
