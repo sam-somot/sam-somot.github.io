@@ -221,6 +221,10 @@
 .research-overview--v22 .research-axis-visual{width:100%;max-width:260px;aspect-ratio:1;min-height:0;margin-inline:auto;background:#fff}
 .research-overview--v22 .research-axis-visual:after{display:none}
 .research-overview--v22 .research-axis img{width:100%;height:100%;object-fit:contain;object-position:center;padding:0;background:#fff}
+/* Compensate for white space inside the PNGs without resizing the cards.
+   Independent scale preserves the existing subtle hover transform. */
+.research-overview--v22 .research-axis img{scale:2.1}
+.research-overview--v22 .research-axis--mediterranean img{scale:1.12}
 .research-overview--v22 .research-axis-copy{align-self:stretch;position:relative;padding:.75rem 0 0;display:flex;flex-direction:column;flex:1;border-top:1px solid var(--line)}
 .research-overview--v22 .axis-number{position:static;margin:0 0 .55rem}
 .research-overview--v22 .research-axis h3{font-size:clamp(1.1rem,1.45vw,1.35rem);margin:0 0 .65rem;min-height:3.4em}
@@ -230,6 +234,9 @@
 .outputs-v22 .output-item{background:#fff;color:var(--ink);border:0;min-width:0}
 .outputs-v22 .output-image{border:0;background:#fff}
 .outputs-v22 .output-image img{object-fit:contain;object-position:center;padding:0;background:#fff}
+.outputs-v22 .output-image{overflow:hidden}
+.outputs-v22 .output-image img{scale:1.9}
+.outputs-v22 .output-item--expertise .output-image img{scale:1.7}
 .outputs-v22 .output-copy{border-top:1px solid var(--line)}
 .outputs-v22 .output-copy h3{color:var(--ink)}
 .outputs-v22 .output-index{color:var(--blue2)}
