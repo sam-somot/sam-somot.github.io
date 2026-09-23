@@ -1,4 +1,32 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'; import Content from '../../content/research.md';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { compiledContent } from '../../content/research.md';
+import figures from '../../data/research-figures.yml';
+import '../styles/research.css';
+
+// The validated Markdown remains the sole source for headings and paragraphs.
+const html = await compiledContent();
+const starts = [...html.matchAll(/<h2\b[^>]*>/g)].map((match) => match.index!);
+if (starts.length !== figures.length) {
+  throw new Error('Research headings and figure metadata must contain the same number of themes.');
+}
+const introduction = html.slice(0, starts[0]);
+const themes = starts.map((start, index) => ({
+  html: html.slice(start, starts[index + 1] ?? html.length),
+  figure: figures[index],
+}));
 ---
-<BaseLayout title="Research — Samuel Somot"><article class="prose research-prose"><Content/></article></BaseLayout>
+<BaseLayout title="Research — Samuel Somot">
+  <article class="research-page">
+    <div class="prose research-intro" set:html={introduction} />
+    <div class="research-themes">
+      {themes.map(({ html, figure }, index) => <section class:list={['research-theme', { 'research-theme--reverse': index % 2 === 1 }]}>
+        <div class="prose research-theme__text" set:html={html} />
+        <figure class="research-theme__figure">
+          <img src={figure.src} alt={figure.alt} width={figure.width} height={figure.height} loading="lazy" decoding="async" />
+          <figcaption>{figure.caption}</figcaption>
+        </figure>
+      </section>)}
+    </div>
+  </article>
+</BaseLayout>
