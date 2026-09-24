@@ -1,0 +1,18 @@
+- path: /
+  description: Samuel Somot is a climate scientist at CNRM working on regional climate and Earth system modelling from Europe to the Mediterranean Sea.
+- path: /about/
+  description: About Samuel Somot, his research in regional climate modelling, teaching, collaborative science and climate services.
+- path: /research/
+  description: Research on regional climate and Earth system modelling, the Euro-Mediterranean climate, extreme events and regional climate information.
+- path: /projects-communities/
+  description: Scientific communities and current and past research projects involving Samuel Somot in regional climate modelling.
+- path: /publications/
+  description: Selected climate science publications by Samuel Somot, with links to his complete publication record on Google Scholar.
+- path: /research-data/
+  description: Open research datasets and regional climate simulations produced or co-produced by Samuel Somot and collaborators.
+- path: /scientific-expertise/
+  description: Samuel Somot’s contributions to IPCC and MedECC assessments, regional climate expertise and climate services.
+- path: /teaching-outreach/
+  description: Enseignements, cours et ressources de communication scientifique de Samuel Somot sur la modélisation régionale et le changement climatique.
+- path: /news/
+  description: News and updates on regional climate research, projects, climate data and teaching from Samuel Somot.
