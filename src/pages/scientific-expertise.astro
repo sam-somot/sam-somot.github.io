@@ -1,4 +1,62 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'; import Content from '../../content/scientific-expertise.md'; import Card from '../components/Card.astro'; import expertise from '../../data/scientific-expertise.yml';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Content from '../../content/scientific-expertise.md';
+import expertise from '../../data/scientific-expertise.yml';
+
+const primary = expertise.filter((item) => item.tier === 'primary');
+const secondary = expertise.filter((item) => item.tier === 'secondary');
 ---
-<BaseLayout title="Scientific Expertise — Samuel Somot"><div class="page-stack"><article class="prose intro-only"><Content/></article><section><div class="grid two">{expertise.map(x=><Card title={x.title} eyebrow={`${x.organization} · ${x.year||`since ${x.since}`} · ${x.role}`} href={x.url} featured={x.featured}>{x.description&&<p>{x.description}</p>}{x.reference&&<p class="reference">{x.reference}</p>}</Card>)}</div></section></div></BaseLayout>
+<BaseLayout title="Scientific Expertise — Samuel Somot">
+  <div class="page-stack expertise-page">
+    <article class="prose intro-only"><Content /></article>
+    <section aria-label="Main expertise areas">
+      <div class="grid two">
+        {primary.map((item) => (
+          <article class="card expertise-primary">
+            <span class="eyebrow">{item.role}</span>
+            <h2>{item.title}</h2>
+            <p>{item.summary}</p>
+            <ul class="expertise-references" aria-label={`References for ${item.title}`}>
+              {item.references.map((reference) => (
+                <li>
+                  <a href={reference.url} target="_blank" rel="noopener noreferrer">{reference.label} <span aria-hidden="true">↗</span></a>
+                  {reference.role && <small>{reference.role}</small>}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section class="expertise-secondary" aria-labelledby="other-expert-contributions">
+      <h2 id="other-expert-contributions">Other expert contributions</h2>
+      <div class="expertise-secondary-list">
+        {secondary.map((item) => (
+          <article class="expertise-secondary-item">
+            <div><h3><a href={item.url} target="_blank" rel="noopener noreferrer">{item.title} <span aria-hidden="true">↗</span></a></h3><p class="expertise-meta">{item.role} · {item.period}</p></div>
+            <p>{item.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .expertise-primary { min-height: 0; }
+  .expertise-primary h2 { font-size: clamp(1.45rem, 2.1vw, 2rem); margin: .45rem 0 .85rem; }
+  .expertise-primary > p { color: var(--muted); margin: 0 0 1.3rem; }
+  .expertise-references { list-style: none; padding: 1rem 0 0; margin: 0; border-top: 1px solid var(--line); display: grid; gap: .75rem; }
+  .expertise-references li { display: grid; gap: .1rem; }
+  .expertise-references a { font-size: .94rem; font-weight: 650; }
+  .expertise-references small { font-size: .78rem; color: var(--muted); }
+  .expertise-secondary h2 { font-size: clamp(1.55rem, 2.6vw, 2.3rem); margin: 0 0 1.3rem; }
+  .expertise-secondary-list { border-top: 1px solid var(--line); }
+  .expertise-secondary-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+  .expertise-secondary-item h3 { font-size: 1.05rem; margin: 0 0 .25rem; }
+  .expertise-secondary-item p { margin: 0; color: var(--muted); font-size: .94rem; }
+  .expertise-secondary-item .expertise-meta { font-size: .8rem; }
+  @media (max-width: 700px) {
+    .expertise-secondary-item { grid-template-columns: 1fr; gap: .35rem; }
+  }
+</style>
