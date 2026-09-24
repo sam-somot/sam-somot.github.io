@@ -7,7 +7,8 @@ import news from '../../data/news.yml';
 
 const featuredCommunities = communities.filter((item) => item.status === 'active' && item.featured);
 const activities = [featuredCommunities[0], ...projects.filter((item) => item.status === 'current' && item.featured)].filter(Boolean);
-const latest = news.filter((item) => item.published).sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 3);
+// ISO-like partial dates sort as written; a year-only item stays after months in that year.
+const latest = news.filter((item) => item.featured).sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 3);
 
 const researchAxes = [
   { number: '01', title: 'Regional climate modelling', text: 'Regional climate and Earth system modelling.', href: '/research#1-regional-climate-modelling', image: '/images/v2.2/01_regional_climate_modelling.png', alt: 'Editorial illustration of regional climate modelling', className: 'research-axis--model' },
@@ -74,7 +75,7 @@ const additionalCommunities = featuredCommunities.slice(1);
   <section class:list={['news-v2', { 'news-v2--empty': latest.length === 0 }]}>
     <div class="section-heading split section-heading--compact"><div><p class="eyebrow">Latest news</p><h2>From research and the community</h2></div><a class="section-link" href="https://www.linkedin.com/in/sam-somot/" target="_blank" rel="noreferrer">Follow me on LinkedIn ↗</a></div>
     {latest.length ? (
-      <div class="news-grid">{latest.map((item) => <a class="news-item" href="/news">{item.image && <img src={item.image} alt="" loading="lazy" />}<div><p class="activity-meta">{item.date}</p><h3>{item.title}</h3><p>{item.summary}</p></div></a>)}</div>
+      <div class="news-grid">{latest.map((item) => <a class="news-item" href="/news"><div><p class="activity-meta">{item.date}</p><h3>{item.title}</h3><p>{item.summary}</p><ul class="news-keywords" aria-label={`Keywords for ${item.title}`}>{item.keywords.map((keyword) => <li>{keyword}</li>)}</ul></div></a>)}</div>
     ) : (
       <div class="empty-state empty-state--compact"><p>No news entries are published yet.</p><a href="/news">View the news archive structure →</a></div>
     )}

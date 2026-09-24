@@ -1,1 +1,59 @@
-[]
+- id: cordex-cmip6-simulations-esgf
+  title: New CNRM CORDEX-CMIP6 simulations available on ESGF
+  date: "2026-09"
+  summary: "A new generation of high-resolution regional climate simulations produced at CNRM within the WCRP CORDEX-CMIP6 framework is now available through ESGF, covering several CORDEX domains including Europe, the Mediterranean, Central America and Australasia."
+  keywords:
+    - CORDEX-CMIP6
+    - regional climate modelling
+    - climate projections
+    - ESGF
+  url: https://metagrid-ceda.east.esgf.io/search
+  featured: true
+
+- id: rivierade-launch-2026
+  title: RIVIERADE project launched
+  date: "2026-01"
+  summary: "The Horizon Europe RIVIERADE project has started, bringing together research on regional ocean climate projections, coastal risks and climate services across European seas."
+  keywords:
+    - RIVIERADE
+    - regional ocean climate projections
+    - European seas
+    - climate services
+  url: https://cordis.europa.eu/project/id/101181983
+  featured: true
+
+- id: climate-data-hackathon-2025
+  title: Le climat en données — Toulouse climate data hackathon
+  date: "2025-12"
+  summary: "The Le climat en données hackathon brought participants together in Toulouse to explore national climate datasets and develop new ways of using and communicating climate information."
+  keywords:
+    - climate data
+    - climate services
+    - France
+    - outreach
+  url: ""
+  featured: true
+
+- id: regional-climate-modelling-course-2025
+  title: New version of my Regional Climate Modelling course available
+  date: "2025"
+  summary: "An updated version of my course on regional climate modelling is now available on Zenodo. The course covers the principles of regional climate modelling and their application to climate projections over Europe and France."
+  keywords:
+    - regional climate modelling
+    - climate projections
+    - teaching
+    - Europe
+  url: https://zenodo.org/records/17287121
+  featured: true
+
+- id: rcm-emulators-2025
+  title: Emulating regional climate models with machine learning
+  date: "2025-04"
+  summary: "A presentation on statistical emulators of regional climate models and hybrid downscaling approaches is now available online."
+  keywords:
+    - RCM emulators
+    - machine learning
+    - regional climate modelling
+    - downscaling
+  url: https://www.youtube.com/watch?v=h76Kot_-FYs
+  featured: true
