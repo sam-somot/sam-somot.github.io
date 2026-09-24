@@ -7,7 +7,7 @@
     - label: "AR6 WGII · 2022 — Mediterranean Region"
       role: Contributing Author
       url: https://doi.org/10.1017/9781009325844.021
-    - label: "AR6 WGI · 2021 — Atlas"
+    - label: "AR6 WGI · 2021 — Atlas & Chapter 10"
       role: Contributing Author · Expert Reviewer
       url: https://doi.org/10.1017/9781009157896.021
     - label: "AR4 WGI · 2007 — Regional Climate Projections"
@@ -33,18 +33,24 @@
       url: https://crocc.reco-occitanie.org/climat-regional/
 
 - id: climate-services
-  title: Climate Services
+  title: National Climate Services and Adaptation Plans
   tier: primary
   role: Scientific Expert · Adviser
   summary: "Scientific expertise for Météo-France climate services, contributing to the development of reference regional climate information for climate-change adaptation in France."
   references:
-    - label: "Météo-France"
-      url: https://meteofrance.com/
     - label: "DRIAS-2020"
       url: https://www.drias-climat.fr/
     - label: "TRACC-2023"
       url: https://hal.science/hal-04991790/
 
+- id: climat-en-donnees
+  title: Le Climat en Données
+  tier: secondary
+  role: Trainer · Mentor · Pre-selection jury
+  period: "2025"
+  summary: "Contribution to the national climate-data hackathon organised in Toulouse."
+  url: https://meteofrance.com/presse/hackathon-le-climat-en-donnees-decouvrez-les-projets-laureats
+  
 - id: cordex-be-ii
   title: CORDEX.be II
   tier: secondary
@@ -54,7 +60,7 @@
   url: https://cordex.meteo.be/
 
 - id: all-envi-mediterranean
-  title: AllEnvi
+  title: COP22 - AllEnvi
   tier: secondary
   role: Lead writer
   period: "2016"
@@ -68,11 +74,3 @@
   period: "2008"
   summary: "Anticiper le changement climatique autour de la Méditerranée."
   url: https://enpc.hal.science/hal-00783825
-
-- id: climat-en-donnees
-  title: Le Climat en Données
-  tier: secondary
-  role: Trainer · Mentor · Pre-selection jury
-  period: "2025"
-  summary: "Contribution to the national climate-data hackathon organised in Toulouse."
-  url: https://meteofrance.com/presse/hackathon-le-climat-en-donnees-decouvrez-les-projets-laureats
