@@ -1,7 +1,47 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import seo from '../../data/seo.yml';
+import links from '../../data/links.yml';
 import '../styles/global.css';
-const { title = 'Samuel Somot — Climate scientist', description = 'Regional climate and Earth system modelling, from Europe to the Mediterranean Sea.' } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const canonical = new URL(pathname, Astro.site).href;
+const page = seo.find((item) => item.path === pathname);
+const { title = 'Samuel Somot — Climate Scientist', description = page?.description ?? 'Regional climate and Earth system modelling, from Europe to the Mediterranean Sea.' } = Astro.props;
+const profileIds = new Set(['linkedin', 'scholar-cited', 'github', 'orcid']);
+const person = pathname === '/' ? {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': new URL('/#person', Astro.site).href,
+  name: 'Samuel Somot',
+  url: new URL('/', Astro.site).href,
+  image: new URL('/images/v2/web/samuel-somot-portrait.webp', Astro.site).href,
+  jobTitle: 'Climate scientist',
+  affiliation: { '@type': 'Organization', name: 'CNRM – Météo-France / CNRS' },
+  sameAs: links.filter((item) => profileIds.has(item.id) && item.active && item.url).map((item) => item.url),
+} : null;
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><meta name="theme-color" content="#073b66"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><title>{title}</title></head><body><a class="skip-link" href="#main">Skip to content</a><div class="shell"><Header/><main id="main"><slot /></main><Footer/></div></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#073b66" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href={new URL('/sitemap-index.xml', Astro.site).href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Samuel Somot" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <title>{title}</title>
+    {person && <script type="application/ld+json" set:html={JSON.stringify(person).replace(/</g, '\\u003c')} />}
+  </head>
+  <body><a class="skip-link" href="#main">Skip to content</a><div class="shell"><Header /><main id="main"><slot /></main><Footer /></div></body>
+</html>
