@@ -1,35 +1,78 @@
-- id: medecc-mar1
-  organization: MedECC
-  year: 2020
-  title: "First Mediterranean Assessment Report (MAR1) — Chapter 2: Drivers of Change"
+- id: ipcc
+  title: IPCC Assessment Reports
+  tier: primary
+  role: Contributing Author · Expert Reviewer
+  summary: "Contributions to IPCC assessment reports on regional climate projections, the regional climate Atlas and climate change in the Mediterranean."
+  references:
+    - label: "AR6 WGII · 2022 — Mediterranean Region"
+      role: Contributing Author
+      url: https://doi.org/10.1017/9781009325844.021
+    - label: "AR6 WGI · 2021 — Atlas"
+      role: Contributing Author · Expert Reviewer
+      url: https://doi.org/10.1017/9781009157896.021
+    - label: "AR4 WGI · 2007 — Regional Climate Projections"
+      role: Contributing Author
+      url: https://www.ipcc.ch/report/ar4/wg1/regional-climate-projections/
+
+- id: medecc
+  title: MedECC
+  tier: primary
   role: Lead Author
-  featured: true
-  description: "Lead Author of the “Drivers of Change” chapter of the First Mediterranean Assessment Report (MAR1), the first comprehensive scientific assessment of climate and environmental change, its impacts and associated risks across the Mediterranean Basin."
-  reference: "Cherif S, Doblas-Miranda E, Lionello P, Borrego C, Giorgi F, Iglesias A, Jebari S, Mahmoudi E, Moriondo M, Pringault O, Rilov G, Somot S, Tsikliras A, Vila M, Zittis G (2020). Drivers of change. In: Climate and Environmental Change in the Mediterranean Basin – Current Situation and Risks for the Future. First Mediterranean Assessment Report, Cramer W, Guiot J, Marini K (eds.), Union for the Mediterranean, Plan Bleu, UNEP/MAP, Marseille, France, pp. 59–180."
-  url: https://www.medecc.org/first-mediterranean-assessment-report-mar1/
-- id: ipcc-ar4-wgi
-  organization: IPCC
-  year: 2007
-  title: "AR4 Working Group I — Chapter 11: Regional Climate Projections"
+  summary: "Lead Author of the climate section of the Drivers of Change chapter of the First Mediterranean Assessment Report (MAR1)."
+  references:
+    - label: "MAR1 · 2020 — Drivers of Change"
+      url: https://doi.org/10.5281/zenodo.7100601
+
+- id: grec-occitanie
+  title: GREC Occitanie
+  tier: primary
   role: Contributing Author
-- id: ipcc-ar6-wgi
-  organization: IPCC
-  year: 2021
-  title: "AR6 Working Group I — Atlas"
-  reference: Gutiérrez et al. (2021)
-  role: Contributing Author
-  description: "Contributing Author to the regional climate assessment of the IPCC AR6 Working Group I Atlas, which synthesizes observed and projected climate change information across world regions."
-- id: ipcc-ar6-wgii
-  organization: IPCC
-  year: 2022
-  title: "AR6 Working Group II — Cross-Chapter Paper 4: Mediterranean Region"
-  role: Contributing Author
-  description: "Contributing Author to the Mediterranean regional assessment of the IPCC Sixth Assessment Report, addressing climate change, impacts, risks and adaptation across the Mediterranean Basin."
-- id: meteo-france-climate-services
-  organization: Météo-France
-  since: 2018
-  title: Météo-France National Climate Services
-  role: Scientific expert
-  featured: true
-  description: "Scientific expert contributing to the development of reference climate information for the French national climate services, including DRIAS-2020, TRACC-2023 and Socle Métropole. This work supports the production, scientific evaluation and interpretation of regional climate projections used for climate-change adaptation in France."
-  url: https://www.drias-climat.fr/
+  summary: "Contribution to regional climate assessment in Occitanie, providing scientific expertise on observed and projected regional climate change."
+  references:
+    - label: "CROCC · 2021 — Climat régional"
+      url: https://crocc.reco-occitanie.org/climat-regional/
+
+- id: climate-services
+  title: Climate Services
+  tier: primary
+  role: Scientific Expert · Adviser
+  summary: "Scientific expertise for Météo-France climate services, contributing to the development of reference regional climate information for climate-change adaptation in France."
+  references:
+    - label: "Météo-France"
+      url: https://meteofrance.com/
+    - label: "DRIAS-2020"
+      url: https://www.drias-climat.fr/
+    - label: "TRACC-2023"
+      url: https://hal.science/hal-04991790/
+
+- id: cordex-be-ii
+  title: CORDEX.be II
+  tier: secondary
+  role: Scientific Committee
+  period: "2024–2027"
+  summary: "Scientific advisory contribution to the Belgian national regional climate modelling initiative."
+  url: https://cordex.meteo.be/
+
+- id: all-envi-mediterranean
+  title: AllEnvi
+  tier: secondary
+  role: Lead writer
+  period: "2016"
+  summary: "Lead writer of the section The Mediterranean Sea in future climate projections."
+  url: https://www.editions.ird.fr/produit/435/9782709922562/the-mediterranean-region-under-climate-change
+
+- id: ipemed-mediterranean
+  title: IPEMED
+  tier: secondary
+  role: Co-author
+  period: "2008"
+  summary: "Anticiper le changement climatique autour de la Méditerranée."
+  url: https://enpc.hal.science/hal-00783825
+
+- id: climat-en-donnees
+  title: Le Climat en Données
+  tier: secondary
+  role: Trainer · Mentor · Pre-selection jury
+  period: "2025"
+  summary: "Contribution to the national climate-data hackathon organised in Toulouse."
+  url: https://meteofrance.com/presse/hackathon-le-climat-en-donnees-decouvrez-les-projets-laureats
