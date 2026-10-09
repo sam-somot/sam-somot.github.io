@@ -1,3 +1,15 @@
+- id: clivar-cordex-jwg-rocp
+  title: New CLIVAR–CORDEX Joint Working Group on Regional Ocean Climate Projections
+  date: "2026-09"
+  summary: "Established in January 2026, the new CLIVAR–CORDEX Joint Working Group on Regional Ocean Climate Projections (JWG-ROCP), co-led by Angélique Melet and myself, aims to strengthen international coordination in regional ocean climate modelling, develop multi-model and multi-region studies, and improve the standardization and dissemination of regional ocean climate projections."
+  keywords:
+    - CORDEX
+    - CLIVAR
+    - regional ocean climate projections
+    - JWG-ROCP
+  url: https://cordex.org/strategic-activities/joint-working-groups/clivar-cordex-jwg-rocp-working-group/
+  featured: true
+
 - id: cordex-cmip6-simulations-esgf
   title: New CNRM CORDEX-CMIP6 simulations available on ESGF
   date: "2026-09"
