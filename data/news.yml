@@ -1,3 +1,29 @@
+- id: mediterranean-coastal-upwelling-internship
+  title: "Master's internship: Future of Mediterranean coastal upwelling under climate change"
+  date: "2026-10"
+  summary: "A 5–6 month Master's internship at CNRM, starting in March 2027, will investigate how Mediterranean coastal upwelling may evolve under global warming. Using reanalyses, observations and Med-CORDEX regional climate simulations, the study will explore changes across global warming levels from +1.5°C to +4°C."
+  keywords:
+    - Mediterranean Sea
+    - coastal upwelling
+    - climate change
+    - Med-CORDEX
+    - ocean modelling
+  url: https://cnrm.sedoo.fr/stage/
+  featured: true
+
+- id: cordex-cmip6-traccs-interview
+  title: "CORDEX-CMIP6: Discussing the new generation of regional climate projections in TRACCS"
+  date: "2026-10"
+  summary: "In an interview for the TRACCS newsletter, I discuss the new generation of CORDEX-CMIP6 regional climate simulations, their scientific advances, their availability to the research community, and their potential applications for regional climate change studies."
+  keywords:
+    - CORDEX-CMIP6
+    - regional climate modelling
+    - climate projections
+    - TRACCS
+    - science communication
+  url: https://pepr-traccs.fr/publication-de-la-nouvelle-generation-de-donnees-cordex-cmip6-vers-une-representation-plus-fine-des-impacts-du-changement-climatique-a-lechelle-regionale/
+  featured: true
+
 - id: clivar-cordex-jwg-rocp
   title: New CLIVAR–CORDEX Joint Working Group on Regional Ocean Climate Projections
   date: "2026-09"
